@@ -88,7 +88,7 @@ GAME
 	{
 		name = ContractSystem
 		scene = 7, 8, 5, 6
-		update = 25311.3479187824
+		update = 25301.3279187821
 		version = 1.0.5
 		CONTRACTS
 		{
@@ -2361,7 +2361,7 @@ GAME
 	FLIGHTSTATE
 	{
 		version = 1.0.5
-		UT = 25313.2679187824
+		UT = 25310.4679187823
 		activeVessel = 0
 		mapViewFiltering = -1026
 		VESSEL
