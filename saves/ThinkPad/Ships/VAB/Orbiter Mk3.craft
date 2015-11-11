@@ -1,5 +1,5 @@
 ship = Orbiter Mk3
-version = 1.0.4
+version = 1.0.5
 description = 
 type = VAB
 size = 7.043584,20.3384,6.369419
@@ -49,12 +49,14 @@ PART
 		name = ModuleCommand
 		isEnabled = True
 		controlSrcStatusText = 
+		stagingEnabled = True
 		EVENTS
 		{
 			MakeReference
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Control From Here
 				guiName = Control From Here
 				category = Control From Here
@@ -66,9 +68,22 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = True
 				guiIcon = Rename Vessel
 				guiName = Rename Vessel
 				category = Rename Vessel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -83,6 +98,7 @@ PART
 		name = ModuleReactionWheel
 		isEnabled = True
 		stateString = Active
+		stagingEnabled = True
 		WheelState = Active
 		EVENTS
 		{
@@ -91,9 +107,22 @@ PART
 				active = True
 				guiActive = True
 				guiActiveEditor = True
+				guiActiveUncommand = False
 				guiIcon = Toggle Torque
 				guiName = Toggle Torque
 				category = Toggle Torque
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -121,12 +150,14 @@ PART
 		isEnabled = True
 		Deployed = False
 		Inoperable = False
+		stagingEnabled = True
 		EVENTS
 		{
 			DeployExperiment
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Deploy
 				guiName = Deploy
 				category = Deploy
@@ -138,6 +169,7 @@ PART
 			{
 				active = True
 				guiActive = False
+				guiActiveUncommand = False
 				guiIcon = 
 				guiName = 
 				category = 
@@ -149,6 +181,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Review Data
 				guiName = Review Data
 				category = Review Data
@@ -160,6 +193,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Reset
 				guiName = Reset
 				category = Reset
@@ -171,6 +205,7 @@ PART
 			{
 				active = True
 				guiActive = False
+				guiActiveUncommand = False
 				guiIcon = Deploy
 				guiName = Deploy
 				category = Deploy
@@ -182,6 +217,7 @@ PART
 			{
 				active = True
 				guiActive = False
+				guiActiveUncommand = False
 				guiIcon = Reset
 				guiName = Reset
 				category = Reset
@@ -193,10 +229,23 @@ PART
 			{
 				active = True
 				guiActive = False
+				guiActiveUncommand = False
 				guiIcon = Restore
 				guiName = Restore
 				category = Restore
 				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
@@ -217,12 +266,14 @@ PART
 	{
 		name = ModuleScienceContainer
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
 			StoreDataExternalEvent
 			{
 				active = False
 				guiActive = False
+				guiActiveUncommand = False
 				guiIcon = 
 				guiName = Store Experiments (0)
 				category = 
@@ -234,6 +285,7 @@ PART
 			{
 				active = False
 				guiActive = False
+				guiActiveUncommand = False
 				guiIcon = 
 				guiName = Take Data (0)
 				category = 
@@ -245,9 +297,22 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Review Data
 				guiName = Review Stored Data (0)
 				category = Review Data
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -262,6 +327,7 @@ PART
 		name = FlagDecal
 		isEnabled = True
 		flagDisplayed = True
+		stagingEnabled = True
 		EVENTS
 		{
 			ToggleFlag
@@ -269,9 +335,22 @@ PART
 				active = True
 				guiActive = False
 				guiActiveEditor = True
+				guiActiveUncommand = False
 				guiIcon = Toggle Flag
 				guiName = Toggle Flag
 				category = Toggle Flag
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -285,8 +364,21 @@ PART
 	{
 		name = ModuleConductionMultiplier
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -296,8 +388,21 @@ PART
 	{
 		name = ModuleTripLogger
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -305,6 +410,42 @@ PART
 		Log
 		{
 			flight = 0
+		}
+	}
+	MODULE
+	{
+		name = TransferDialogSpawner
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+			SpawnDialog
+			{
+				active = True
+				guiActive = True
+				guiActiveUncommand = True
+				guiIcon = Transfer Crew
+				guiName = Transfer Crew
+				category = Transfer Crew
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
 		}
 	}
 	RESOURCE
@@ -315,6 +456,7 @@ PART
 		flowState = True
 		isTweakable = True
 		hideFlow = False
+		isVisible = True
 		flowMode = Both
 	}
 	RESOURCE
@@ -325,6 +467,7 @@ PART
 		flowState = True
 		isTweakable = True
 		hideFlow = False
+		isVisible = True
 		flowMode = Both
 	}
 }
@@ -381,6 +524,7 @@ PART
 		flowState = True
 		isTweakable = True
 		hideFlow = False
+		isVisible = True
 		flowMode = Both
 	}
 	RESOURCE
@@ -391,6 +535,7 @@ PART
 		flowState = True
 		isTweakable = True
 		hideFlow = False
+		isVisible = True
 		flowMode = Both
 	}
 }
@@ -433,12 +578,29 @@ PART
 		name = ModuleRCS
 		isEnabled = True
 		rcsEnabled = True
+		thrustPercentage = 100
+		enableYaw = True
+		enablePitch = True
+		enableRoll = True
+		enableX = True
+		enableY = True
+		enableZ = True
+		stagingEnabled = True
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
 		EVENTS
 		{
 			Disable
 			{
 				active = True
 				guiActive = True
+				guiActiveEditor = True
+				guiActiveUncommand = False
 				guiIcon = Disable RCS Port
 				guiName = Disable RCS Port
 				category = Disable RCS Port
@@ -450,9 +612,23 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveEditor = True
+				guiActiveUncommand = False
 				guiIcon = Enable RCS Port
 				guiName = Enable RCS Port
 				category = Enable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -506,12 +682,29 @@ PART
 		name = ModuleRCS
 		isEnabled = True
 		rcsEnabled = True
+		thrustPercentage = 100
+		enableYaw = True
+		enablePitch = True
+		enableRoll = True
+		enableX = True
+		enableY = True
+		enableZ = True
+		stagingEnabled = True
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
 		EVENTS
 		{
 			Disable
 			{
 				active = True
 				guiActive = True
+				guiActiveEditor = True
+				guiActiveUncommand = False
 				guiIcon = Disable RCS Port
 				guiName = Disable RCS Port
 				category = Disable RCS Port
@@ -523,9 +716,23 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveEditor = True
+				guiActiveUncommand = False
 				guiIcon = Enable RCS Port
 				guiName = Enable RCS Port
 				category = Enable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -579,12 +786,29 @@ PART
 		name = ModuleRCS
 		isEnabled = True
 		rcsEnabled = True
+		thrustPercentage = 100
+		enableYaw = True
+		enablePitch = True
+		enableRoll = True
+		enableX = True
+		enableY = True
+		enableZ = True
+		stagingEnabled = True
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
 		EVENTS
 		{
 			Disable
 			{
 				active = True
 				guiActive = True
+				guiActiveEditor = True
+				guiActiveUncommand = False
 				guiIcon = Disable RCS Port
 				guiName = Disable RCS Port
 				category = Disable RCS Port
@@ -596,9 +820,23 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveEditor = True
+				guiActiveUncommand = False
 				guiIcon = Enable RCS Port
 				guiName = Enable RCS Port
 				category = Enable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -652,12 +890,29 @@ PART
 		name = ModuleRCS
 		isEnabled = True
 		rcsEnabled = True
+		thrustPercentage = 100
+		enableYaw = True
+		enablePitch = True
+		enableRoll = True
+		enableX = True
+		enableY = True
+		enableZ = True
+		stagingEnabled = True
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
 		EVENTS
 		{
 			Disable
 			{
 				active = True
 				guiActive = True
+				guiActiveEditor = True
+				guiActiveUncommand = False
 				guiIcon = Disable RCS Port
 				guiName = Disable RCS Port
 				category = Disable RCS Port
@@ -669,9 +924,23 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveEditor = True
+				guiActiveUncommand = False
 				guiIcon = Enable RCS Port
 				guiName = Enable RCS Port
 				category = Enable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -728,6 +997,7 @@ PART
 		name = ModuleReactionWheel
 		isEnabled = True
 		stateString = Active
+		stagingEnabled = True
 		WheelState = Active
 		EVENTS
 		{
@@ -736,9 +1006,22 @@ PART
 				active = True
 				guiActive = True
 				guiActiveEditor = True
+				guiActiveUncommand = False
 				guiIcon = Toggle Torque
 				guiName = Toggle Torque
 				category = Toggle Torque
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -806,6 +1089,7 @@ PART
 		flowState = True
 		isTweakable = True
 		hideFlow = False
+		isVisible = True
 		flowMode = Both
 	}
 }
@@ -848,12 +1132,29 @@ PART
 		name = ModuleRCS
 		isEnabled = True
 		rcsEnabled = True
+		thrustPercentage = 100
+		enableYaw = True
+		enablePitch = True
+		enableRoll = True
+		enableX = True
+		enableY = True
+		enableZ = True
+		stagingEnabled = True
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
 		EVENTS
 		{
 			Disable
 			{
 				active = True
 				guiActive = True
+				guiActiveEditor = True
+				guiActiveUncommand = False
 				guiIcon = Disable RCS Port
 				guiName = Disable RCS Port
 				category = Disable RCS Port
@@ -865,9 +1166,23 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveEditor = True
+				guiActiveUncommand = False
 				guiIcon = Enable RCS Port
 				guiName = Enable RCS Port
 				category = Enable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -921,12 +1236,29 @@ PART
 		name = ModuleRCS
 		isEnabled = True
 		rcsEnabled = True
+		thrustPercentage = 100
+		enableYaw = True
+		enablePitch = True
+		enableRoll = True
+		enableX = True
+		enableY = True
+		enableZ = True
+		stagingEnabled = True
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
 		EVENTS
 		{
 			Disable
 			{
 				active = True
 				guiActive = True
+				guiActiveEditor = True
+				guiActiveUncommand = False
 				guiIcon = Disable RCS Port
 				guiName = Disable RCS Port
 				category = Disable RCS Port
@@ -938,9 +1270,23 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveEditor = True
+				guiActiveUncommand = False
 				guiIcon = Enable RCS Port
 				guiName = Enable RCS Port
 				category = Enable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -994,12 +1340,29 @@ PART
 		name = ModuleRCS
 		isEnabled = True
 		rcsEnabled = True
+		thrustPercentage = 100
+		enableYaw = True
+		enablePitch = True
+		enableRoll = True
+		enableX = True
+		enableY = True
+		enableZ = True
+		stagingEnabled = True
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
 		EVENTS
 		{
 			Disable
 			{
 				active = True
 				guiActive = True
+				guiActiveEditor = True
+				guiActiveUncommand = False
 				guiIcon = Disable RCS Port
 				guiName = Disable RCS Port
 				category = Disable RCS Port
@@ -1011,9 +1374,23 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveEditor = True
+				guiActiveUncommand = False
 				guiIcon = Enable RCS Port
 				guiName = Enable RCS Port
 				category = Enable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -1067,12 +1444,29 @@ PART
 		name = ModuleRCS
 		isEnabled = True
 		rcsEnabled = True
+		thrustPercentage = 100
+		enableYaw = True
+		enablePitch = True
+		enableRoll = True
+		enableX = True
+		enableY = True
+		enableZ = True
+		stagingEnabled = True
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
 		EVENTS
 		{
 			Disable
 			{
 				active = True
 				guiActive = True
+				guiActiveEditor = True
+				guiActiveUncommand = False
 				guiIcon = Disable RCS Port
 				guiName = Disable RCS Port
 				category = Disable RCS Port
@@ -1084,9 +1478,23 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveEditor = True
+				guiActiveUncommand = False
 				guiIcon = Enable RCS Port
 				guiName = Enable RCS Port
 				category = Enable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -1145,6 +1553,7 @@ PART
 		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
+		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -1158,6 +1567,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -1169,9 +1579,22 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -1198,15 +1621,34 @@ PART
 		name = ModuleJettison
 		isEnabled = True
 		isJettisoned = False
+		shroudHideOverride = False
+		stagingEnabled = True
+		shroudHideOverride_UIFlight
+		{
+			controlEnabled = True
+		}
 		EVENTS
 		{
 			Jettison
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Jettison
 				guiName = Jettison
 				category = Jettison
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -1226,6 +1668,8 @@ PART
 		isEnabled = True
 		gimbalLock = False
 		gimbalLimiter = 100
+		gimbalActive = False
+		stagingEnabled = True
 		gimbalLock_UIFlight
 		{
 			controlEnabled = True
@@ -1239,6 +1683,18 @@ PART
 		}
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -1258,10 +1714,23 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleAnimateHeat
+		name = FXModuleAnimateThrottle
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -1271,8 +1740,21 @@ PART
 	{
 		name = ModuleAlternator
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -1282,15 +1764,29 @@ PART
 	{
 		name = ModuleTestSubject
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
 			RunTestEvent
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Run Test
 				guiName = Run Test
 				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -1304,8 +1800,21 @@ PART
 	{
 		name = ModuleSurfaceFX
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -1315,10 +1824,11 @@ PART
 	{
 		name = ElectricCharge
 		amount = 0
-		maxAmount = 0
+		maxAmount = 0.16
 		flowState = True
 		isTweakable = False
 		hideFlow = True
+		isVisible = True
 		flowMode = Both
 	}
 }
@@ -1366,6 +1876,7 @@ PART
 		savedLegState = 0
 		savedLocalPosition = (0, 0, 0)
 		suspensionLocked = True
+		stagingEnabled = True
 		StartDeployed_UIFlight
 		{
 			controlEnabled = True
@@ -1376,6 +1887,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Lower Legs
 				guiName = Lower Legs
 				category = Lower Legs
@@ -1387,6 +1899,7 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Raise Legs
 				guiName = Raise Legs
 				category = Raise Legs
@@ -1398,6 +1911,7 @@ PART
 			{
 				active = True
 				guiActive = False
+				guiActiveUncommand = False
 				guiIcon = Repair Leg
 				guiName = Repair Leg
 				category = Repair Leg
@@ -1410,6 +1924,7 @@ PART
 				active = False
 				guiActive = True
 				guiActiveEditor = True
+				guiActiveUncommand = False
 				guiIcon = Lock Suspension
 				guiName = Lock Suspension
 				category = Lock Suspension
@@ -1422,11 +1937,24 @@ PART
 				active = True
 				guiActive = True
 				guiActiveEditor = True
+				guiActiveUncommand = False
 				guiIcon = UnLock Suspension
 				guiName = UnLock Suspension
 				category = UnLock Suspension
 				guiActiveUnfocused = True
 				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
 		}
@@ -1495,6 +2023,7 @@ PART
 		savedLegState = 0
 		savedLocalPosition = (0, 0, 0)
 		suspensionLocked = False
+		stagingEnabled = True
 		StartDeployed_UIFlight
 		{
 			controlEnabled = True
@@ -1505,6 +2034,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Lower Legs
 				guiName = Lower Legs
 				category = Lower Legs
@@ -1516,6 +2046,7 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Raise Legs
 				guiName = Raise Legs
 				category = Raise Legs
@@ -1527,6 +2058,7 @@ PART
 			{
 				active = True
 				guiActive = False
+				guiActiveUncommand = False
 				guiIcon = Repair Leg
 				guiName = Repair Leg
 				category = Repair Leg
@@ -1539,6 +2071,7 @@ PART
 				active = True
 				guiActive = True
 				guiActiveEditor = True
+				guiActiveUncommand = False
 				guiIcon = Lock Suspension
 				guiName = Lock Suspension
 				category = Lock Suspension
@@ -1551,11 +2084,24 @@ PART
 				active = False
 				guiActive = True
 				guiActiveEditor = True
+				guiActiveUncommand = False
 				guiIcon = UnLock Suspension
 				guiName = UnLock Suspension
 				category = UnLock Suspension
 				guiActiveUnfocused = True
 				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
 		}
@@ -1624,6 +2170,7 @@ PART
 		savedLegState = 0
 		savedLocalPosition = (0, 0, 0)
 		suspensionLocked = False
+		stagingEnabled = True
 		StartDeployed_UIFlight
 		{
 			controlEnabled = True
@@ -1634,6 +2181,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Lower Legs
 				guiName = Lower Legs
 				category = Lower Legs
@@ -1645,6 +2193,7 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Raise Legs
 				guiName = Raise Legs
 				category = Raise Legs
@@ -1656,6 +2205,7 @@ PART
 			{
 				active = True
 				guiActive = False
+				guiActiveUncommand = False
 				guiIcon = Repair Leg
 				guiName = Repair Leg
 				category = Repair Leg
@@ -1668,6 +2218,7 @@ PART
 				active = True
 				guiActive = True
 				guiActiveEditor = True
+				guiActiveUncommand = False
 				guiIcon = Lock Suspension
 				guiName = Lock Suspension
 				category = Lock Suspension
@@ -1680,11 +2231,24 @@ PART
 				active = False
 				guiActive = True
 				guiActiveEditor = True
+				guiActiveUncommand = False
 				guiIcon = UnLock Suspension
 				guiName = UnLock Suspension
 				category = UnLock Suspension
 				guiActiveUnfocused = True
 				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
 		}
@@ -1753,6 +2317,7 @@ PART
 		savedLegState = 0
 		savedLocalPosition = (0, 0, 0)
 		suspensionLocked = False
+		stagingEnabled = True
 		StartDeployed_UIFlight
 		{
 			controlEnabled = True
@@ -1763,6 +2328,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Lower Legs
 				guiName = Lower Legs
 				category = Lower Legs
@@ -1774,6 +2340,7 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Raise Legs
 				guiName = Raise Legs
 				category = Raise Legs
@@ -1785,6 +2352,7 @@ PART
 			{
 				active = True
 				guiActive = False
+				guiActiveUncommand = False
 				guiIcon = Repair Leg
 				guiName = Repair Leg
 				category = Repair Leg
@@ -1797,6 +2365,7 @@ PART
 				active = True
 				guiActive = True
 				guiActiveEditor = True
+				guiActiveUncommand = False
 				guiIcon = Lock Suspension
 				guiName = Lock Suspension
 				category = Lock Suspension
@@ -1809,11 +2378,24 @@ PART
 				active = False
 				guiActive = True
 				guiActiveEditor = True
+				guiActiveUncommand = False
 				guiIcon = UnLock Suspension
 				guiName = UnLock Suspension
 				category = UnLock Suspension
 				guiActiveUnfocused = True
 				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
 		}
@@ -1877,6 +2459,7 @@ PART
 		isEnabled = True
 		ejectionForcePercent = 100
 		isDecoupled = False
+		stagingEnabled = True
 		ejectionForcePercent_UIFlight
 		{
 			controlEnabled = True
@@ -1890,9 +2473,23 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Decouple
 				guiName = Decouple
 				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Decoupler: Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -1908,17 +2505,81 @@ PART
 	}
 	MODULE
 	{
+		name = ModuleToggleCrossfeed
+		isEnabled = True
+		crossfeedStatus = False
+		stagingEnabled = True
+		EVENTS
+		{
+			ToggleEvent
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiActiveUncommand = False
+				guiIcon = Disable Crossfeed
+				guiName = Enable Crossfeed
+				category = Disable Crossfeed
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			EnableAction
+			{
+				actionGroup = None
+			}
+			DisableAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
 		name = ModuleTestSubject
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
 			RunTestEvent
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Run Test
 				guiName = Run Test
 				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -1971,6 +2632,7 @@ PART
 		flowState = True
 		isTweakable = True
 		hideFlow = False
+		isVisible = True
 		flowMode = Both
 	}
 }
@@ -2016,6 +2678,7 @@ PART
 		flowState = True
 		isTweakable = True
 		hideFlow = False
+		isVisible = True
 		flowMode = Both
 	}
 }
@@ -2061,6 +2724,7 @@ PART
 		flowState = True
 		isTweakable = True
 		hideFlow = False
+		isVisible = True
 		flowMode = Both
 	}
 }
@@ -2106,6 +2770,7 @@ PART
 		flowState = True
 		isTweakable = True
 		hideFlow = False
+		isVisible = True
 		flowMode = Both
 	}
 }
@@ -2149,6 +2814,7 @@ PART
 		persistentState = STOWED
 		minAirPressureToOpen = 0.04
 		deployAltitude = 1000
+		stagingEnabled = True
 		minAirPressureToOpen_UIFlight
 		{
 			controlEnabled = True
@@ -2169,6 +2835,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Deploy Chute
 				guiName = Deploy Chute
 				category = Deploy Chute
@@ -2180,6 +2847,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Cut Parachute
 				guiName = Cut Parachute
 				category = Cut Parachute
@@ -2191,11 +2859,36 @@ PART
 			{
 				active = False
 				guiActive = False
+				guiActiveUncommand = False
 				guiIcon = Repack Chute
 				guiName = Repack Chute
 				category = Repack Chute
 				guiActiveUnfocused = True
 				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			Disarm
+			{
+				active = False
+				guiActive = True
+				guiActiveUncommand = False
+				guiIcon = Disarm
+				guiName = Disarm
+				category = Disarm
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
 		}
@@ -2215,15 +2908,29 @@ PART
 	{
 		name = ModuleTestSubject
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
 			RunTestEvent
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Run Test
 				guiName = Run Test
 				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -2237,8 +2944,21 @@ PART
 	{
 		name = ModuleDragModifier
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -2248,8 +2968,21 @@ PART
 	{
 		name = ModuleDragModifier
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -2296,6 +3029,7 @@ PART
 		persistentState = STOWED
 		minAirPressureToOpen = 0.04
 		deployAltitude = 1000
+		stagingEnabled = True
 		minAirPressureToOpen_UIFlight
 		{
 			controlEnabled = True
@@ -2316,6 +3050,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Deploy Chute
 				guiName = Deploy Chute
 				category = Deploy Chute
@@ -2327,6 +3062,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Cut Parachute
 				guiName = Cut Parachute
 				category = Cut Parachute
@@ -2338,11 +3074,36 @@ PART
 			{
 				active = False
 				guiActive = False
+				guiActiveUncommand = False
 				guiIcon = Repack Chute
 				guiName = Repack Chute
 				category = Repack Chute
 				guiActiveUnfocused = True
 				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			Disarm
+			{
+				active = False
+				guiActive = True
+				guiActiveUncommand = False
+				guiIcon = Disarm
+				guiName = Disarm
+				category = Disarm
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
 		}
@@ -2362,15 +3123,29 @@ PART
 	{
 		name = ModuleTestSubject
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
 			RunTestEvent
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Run Test
 				guiName = Run Test
 				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -2384,8 +3159,21 @@ PART
 	{
 		name = ModuleDragModifier
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -2395,8 +3183,21 @@ PART
 	{
 		name = ModuleDragModifier
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -2443,6 +3244,7 @@ PART
 		persistentState = STOWED
 		minAirPressureToOpen = 0.04
 		deployAltitude = 1000
+		stagingEnabled = True
 		minAirPressureToOpen_UIFlight
 		{
 			controlEnabled = True
@@ -2463,6 +3265,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Deploy Chute
 				guiName = Deploy Chute
 				category = Deploy Chute
@@ -2474,6 +3277,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Cut Parachute
 				guiName = Cut Parachute
 				category = Cut Parachute
@@ -2485,11 +3289,36 @@ PART
 			{
 				active = False
 				guiActive = False
+				guiActiveUncommand = False
 				guiIcon = Repack Chute
 				guiName = Repack Chute
 				category = Repack Chute
 				guiActiveUnfocused = True
 				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			Disarm
+			{
+				active = False
+				guiActive = True
+				guiActiveUncommand = False
+				guiIcon = Disarm
+				guiName = Disarm
+				category = Disarm
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
 		}
@@ -2509,15 +3338,29 @@ PART
 	{
 		name = ModuleTestSubject
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
 			RunTestEvent
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Run Test
 				guiName = Run Test
 				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -2531,8 +3374,21 @@ PART
 	{
 		name = ModuleDragModifier
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -2542,8 +3398,21 @@ PART
 	{
 		name = ModuleDragModifier
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -2554,7 +3423,7 @@ PART
 {
 	part = fuelTank3-2_4293647510
 	partName = Part
-	pos = -0.6100484,8.292101,0.048554
+	pos = -0.6100484,8.292101,0.04855398
 	attPos = 0,0,0
 	attPos0 = 0,-4.11547,0
 	rot = 0.03084357,0.7064338,-0.03084357,0.7064338
@@ -2595,6 +3464,7 @@ PART
 		flowState = True
 		isTweakable = True
 		hideFlow = False
+		isVisible = True
 		flowMode = Both
 	}
 	RESOURCE
@@ -2605,6 +3475,7 @@ PART
 		flowState = True
 		isTweakable = True
 		hideFlow = False
+		isVisible = True
 		flowMode = Both
 	}
 }
@@ -2612,7 +3483,7 @@ PART
 {
 	part = engineLargeSkipper_4293642772
 	partName = Part
-	pos = -0.9368823,4.556373,0.04855398
+	pos = -0.9368823,4.556373,0.04855396
 	attPos = 0,0,0
 	attPos0 = 0,-3.75,0
 	rot = 0.03084357,0.7064338,-0.03084357,0.7064338
@@ -2650,6 +3521,7 @@ PART
 		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
+		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -2663,6 +3535,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -2674,9 +3547,22 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -2703,15 +3589,34 @@ PART
 		name = ModuleJettison
 		isEnabled = True
 		isJettisoned = True
+		shroudHideOverride = False
+		stagingEnabled = True
+		shroudHideOverride_UIFlight
+		{
+			controlEnabled = True
+		}
 		EVENTS
 		{
 			Jettison
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Jettison
 				guiName = Jettison
 				category = Jettison
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -2731,6 +3636,8 @@ PART
 		isEnabled = True
 		gimbalLock = False
 		gimbalLimiter = 100
+		gimbalActive = False
+		stagingEnabled = True
 		gimbalLock_UIFlight
 		{
 			controlEnabled = True
@@ -2744,6 +3651,18 @@ PART
 		}
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -2763,10 +3682,23 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleAnimateHeat
+		name = FXModuleAnimateThrottle
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -2776,8 +3708,21 @@ PART
 	{
 		name = ModuleAlternator
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -2787,15 +3732,29 @@ PART
 	{
 		name = ModuleTestSubject
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
 			RunTestEvent
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Run Test
 				guiName = Run Test
 				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -2809,8 +3768,21 @@ PART
 	{
 		name = ModuleSurfaceFX
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -2820,10 +3792,11 @@ PART
 	{
 		name = ElectricCharge
 		amount = 0
-		maxAmount = 0
+		maxAmount = 0.2
 		flowState = True
 		isTweakable = False
 		hideFlow = True
+		isVisible = True
 		flowMode = Both
 	}
 }
@@ -2866,6 +3839,7 @@ PART
 		isEnabled = True
 		ejectionForcePercent = 100
 		isDecoupled = False
+		stagingEnabled = True
 		ejectionForcePercent_UIFlight
 		{
 			controlEnabled = True
@@ -2879,9 +3853,23 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Decouple
 				guiName = Decouple
 				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Decoupler: Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -2897,17 +3885,81 @@ PART
 	}
 	MODULE
 	{
+		name = ModuleToggleCrossfeed
+		isEnabled = True
+		crossfeedStatus = False
+		stagingEnabled = True
+		EVENTS
+		{
+			ToggleEvent
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiActiveUncommand = False
+				guiIcon = Disable Crossfeed
+				guiName = Enable Crossfeed
+				category = Disable Crossfeed
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			EnableAction
+			{
+				actionGroup = None
+			}
+			DisableAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
 		name = ModuleTestSubject
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
 			RunTestEvent
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Run Test
 				guiName = Run Test
 				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -2964,6 +4016,7 @@ PART
 		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
+		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -2977,6 +4030,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -2988,9 +4042,22 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -3014,30 +4081,19 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleAnimateHeat
+		name = FXModuleAnimateThrottle
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FlagDecal
-		isEnabled = True
-		flagDisplayed = True
-		EVENTS
-		{
-			ToggleFlag
+			ToggleStaging
 			{
 				active = True
 				guiActive = False
-				guiActiveEditor = True
-				guiIcon = Toggle Flag
-				guiName = Toggle Flag
-				category = Toggle Flag
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -3051,15 +4107,29 @@ PART
 	{
 		name = ModuleTestSubject
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
 			RunTestEvent
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Run Test
 				guiName = Run Test
 				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -3073,8 +4143,21 @@ PART
 	{
 		name = ModuleSurfaceFX
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -3088,6 +4171,7 @@ PART
 		flowState = True
 		isTweakable = True
 		hideFlow = False
+		isVisible = True
 		flowMode = Both
 	}
 }
@@ -3131,8 +4215,21 @@ PART
 	{
 		name = CModuleLinkedMesh
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -3142,8 +4239,21 @@ PART
 	{
 		name = CModuleStrut
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -3190,8 +4300,21 @@ PART
 	{
 		name = CModuleLinkedMesh
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -3201,8 +4324,21 @@ PART
 	{
 		name = CModuleStrut
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -3213,7 +4349,7 @@ PART
 {
 	part = strutConnector_4293495398
 	partName = CompoundPart
-	pos = -0.4828592,3.999143,2.478451
+	pos = -0.482859,3.999143,2.478451
 	attPos = 0,0,0
 	attPos0 = 0.5008606,-1.300209,-3.697012E-07
 	rot = 0.04361939,0.9990483,1.734721E-05,-0.0004000191
@@ -3249,8 +4385,21 @@ PART
 	{
 		name = CModuleLinkedMesh
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -3260,8 +4409,21 @@ PART
 	{
 		name = CModuleStrut
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -3272,7 +4434,7 @@ PART
 {
 	part = radialDecoupler2_4293503016
 	partName = Part
-	pos = -0.8451688,5.604669,-1.128872
+	pos = -0.8451689,5.604669,-1.128872
 	attPos = 0,0,0
 	attPos0 = 1.177426,-2.697698,-1.750886E-07
 	rot = 0.03084357,0.7064337,0.03084357,-0.7064338
@@ -3307,6 +4469,7 @@ PART
 		isEnabled = True
 		ejectionForcePercent = 100
 		isDecoupled = False
+		stagingEnabled = True
 		ejectionForcePercent_UIFlight
 		{
 			controlEnabled = True
@@ -3320,9 +4483,23 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Decouple
 				guiName = Decouple
 				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Decoupler: Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -3338,17 +4515,81 @@ PART
 	}
 	MODULE
 	{
+		name = ModuleToggleCrossfeed
+		isEnabled = True
+		crossfeedStatus = False
+		stagingEnabled = True
+		EVENTS
+		{
+			ToggleEvent
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiActiveUncommand = False
+				guiIcon = Disable Crossfeed
+				guiName = Enable Crossfeed
+				category = Disable Crossfeed
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			EnableAction
+			{
+				actionGroup = None
+			}
+			DisableAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
 		name = ModuleTestSubject
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
 			RunTestEvent
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Run Test
 				guiName = Run Test
 				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -3366,7 +4607,7 @@ PART
 	pos = -0.8684943,5.338056,-2.381342
 	attPos = 0,0,0
 	attPos0 = -1.252471,-0.2676325,-3.871395E-08
-	rot = 0.04361939,0.9990482,1.138511E-07,1.315318E-07
+	rot = 0.04361939,0.9990482,1.101743E-07,2.157453E-07
 	attRot = 0,0,0,1
 	attRot0 = -8.429368E-08,-0.7071068,-8.429368E-08,0.7071068
 	mir = 1,1,1
@@ -3405,6 +4646,7 @@ PART
 		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
+		stagingEnabled = True
 		thrustPercentage_UIFlight
 		{
 			controlEnabled = True
@@ -3418,6 +4660,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Activate Engine
 				guiName = Activate Engine
 				category = Activate Engine
@@ -3429,9 +4672,22 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Shutdown Engine
 				guiName = Shutdown Engine
 				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -3455,30 +4711,19 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleAnimateHeat
+		name = FXModuleAnimateThrottle
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FlagDecal
-		isEnabled = True
-		flagDisplayed = True
-		EVENTS
-		{
-			ToggleFlag
+			ToggleStaging
 			{
 				active = True
 				guiActive = False
-				guiActiveEditor = True
-				guiIcon = Toggle Flag
-				guiName = Toggle Flag
-				category = Toggle Flag
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -3492,15 +4737,29 @@ PART
 	{
 		name = ModuleTestSubject
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
 			RunTestEvent
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Run Test
 				guiName = Run Test
 				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -3514,8 +4773,21 @@ PART
 	{
 		name = ModuleSurfaceFX
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -3529,6 +4801,7 @@ PART
 		flowState = True
 		isTweakable = True
 		hideFlow = False
+		isVisible = True
 		flowMode = Both
 	}
 }
@@ -3539,7 +4812,7 @@ PART
 	pos = -0.2212162,12.73647,-2.716588
 	attPos = 0,0,0
 	attPos0 = -5.195738E-10,7.426681,0.3352477
-	rot = 2.782014E-07,-3.918296E-07,0.7372773,-0.6755902
+	rot = 3.386038E-07,-4.577473E-07,0.7372773,-0.6755903
 	attRot = 0,0,0,1
 	attRot0 = -0.7071068,0.7071068,1.089827E-07,-8.790936E-08
 	mir = 1,1,1
@@ -3572,8 +4845,21 @@ PART
 	{
 		name = CModuleLinkedMesh
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -3583,8 +4869,21 @@ PART
 	{
 		name = CModuleStrut
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -3595,10 +4894,10 @@ PART
 {
 	part = strutConnector_4293496258
 	partName = CompoundPart
-	pos = -0.5019041,3.96169,-2.251347
+	pos = -0.5019039,3.96169,-2.251347
 	attPos = 0,0,0
 	attPos0 = -0.4851526,-1.339179,-0.1299963
-	rot = -0.04324624,-0.9905013,0.005693347,-0.1304018
+	rot = -0.04324624,-0.9905013,0.005693342,-0.1304017
 	attRot = 0,0,0,1
 	attRot0 = 1.74382E-14,0.1305264,-1.917964E-14,-0.9914448
 	mir = 1,1,1
@@ -3631,8 +4930,21 @@ PART
 	{
 		name = CModuleLinkedMesh
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -3642,8 +4954,21 @@ PART
 	{
 		name = CModuleStrut
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -3657,7 +4982,7 @@ PART
 	pos = -1.48077,4.086448,-2.381341
 	attPos = 0,0,0
 	attPos0 = 0.5008605,-1.300209,-3.697012E-07
-	rot = -1.759171E-05,-0.0004001772,0.04361941,-0.9990482
+	rot = -1.759171E-05,-0.0004001772,0.04361942,-0.9990482
 	attRot = 0,0,0,1
 	attRot0 = -2.008512E-14,1,-2.008914E-14,-0.0004003529
 	mir = 1,1,1
@@ -3690,8 +5015,21 @@ PART
 	{
 		name = CModuleLinkedMesh
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -3701,8 +5039,21 @@ PART
 	{
 		name = CModuleStrut
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -3713,7 +5064,7 @@ PART
 {
 	part = launchClamp1_4293493774
 	partName = Part
-	pos = -2.974854,4.374648,0.04855411
+	pos = -2.974854,4.374648,0.04855409
 	attPos = 0,0,0
 	attPos0 = -1.054723E-07,-4.108656,-2.014379
 	rot = -0.03084346,-0.7064338,0.03084346,-0.7064338
@@ -3747,6 +5098,7 @@ PART
 		isEnabled = True
 		scaleFactor = 2.026338
 		height = 5.112848
+		stagingEnabled = True
 		towerRot = 0.03084346,0.7064338,-0.03084346,-0.7064338
 		EVENTS
 		{
@@ -3754,9 +5106,22 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Release Clamp
 				guiName = Release Clamp
 				category = Release Clamp
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -3776,12 +5141,14 @@ PART
 		isEnabled = True
 		generatorIsActive = False
 		throttle = 0
+		stagingEnabled = True
 		EVENTS
 		{
 			Activate
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Activate Generator
 				guiName = Activate Generator
 				category = Activate Generator
@@ -3793,9 +5160,22 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Shutdown Generator
 				guiName = Shutdown Generator
 				category = Shutdown Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -3821,15 +5201,29 @@ PART
 	{
 		name = ModuleTestSubject
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
 			RunTestEvent
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Run Test
 				guiName = Run Test
 				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -3844,7 +5238,7 @@ PART
 {
 	part = launchClamp1_4293492658
 	partName = Part
-	pos = 1.038572,4.023515,0.04855368
+	pos = 1.038572,4.023515,0.04855366
 	attPos = 0,0,0
 	attPos0 = 2.814922E-07,-4.108656,2.014379
 	rot = -0.03084367,-0.7064337,-0.03084368,0.7064338
@@ -3878,6 +5272,7 @@ PART
 		isEnabled = True
 		scaleFactor = 1.821505
 		height = 4.596016
+		stagingEnabled = True
 		towerRot = 0.03084367,0.7064338,0.03084368,0.7064338
 		EVENTS
 		{
@@ -3885,9 +5280,22 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Release Clamp
 				guiName = Release Clamp
 				category = Release Clamp
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -3907,12 +5315,14 @@ PART
 		isEnabled = True
 		generatorIsActive = False
 		throttle = 0
+		stagingEnabled = True
 		EVENTS
 		{
 			Activate
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Activate Generator
 				guiName = Activate Generator
 				category = Activate Generator
@@ -3924,9 +5334,22 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Shutdown Generator
 				guiName = Shutdown Generator
 				category = Shutdown Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -3952,15 +5375,29 @@ PART
 	{
 		name = ModuleTestSubject
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
 			RunTestEvent
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Run Test
 				guiName = Run Test
 				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -3975,7 +5412,7 @@ PART
 {
 	part = dockingPort2_4292562422
 	partName = Part
-	pos = 0.2272825,17.86284,0.04855408
+	pos = 0.2272825,17.86284,0.04855409
 	attPos = 0,0,0
 	attPos0 = -4.020556E-09,0.2853034,-6.640931E-08
 	rot = 0,0,-0.0436194,0.9990483
@@ -4006,6 +5443,8 @@ PART
 	{
 		name = ModuleDockingNode
 		isEnabled = True
+		crossfeed = True
+		stagingEnabled = False
 		state = Ready
 		dockUId = 0
 		dockNodeIdx = 0
@@ -4015,6 +5454,7 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Undock
 				guiName = Undock
 				category = Undock
@@ -4026,6 +5466,7 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Undock
 				guiName = Undock
 				category = Undock
@@ -4037,6 +5478,7 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Decouple Node
 				guiName = Decouple Node
 				category = Decouple Node
@@ -4048,6 +5490,7 @@ PART
 			{
 				active = True
 				guiActive = False
+				guiActiveUncommand = False
 				guiIcon = Set as Target
 				guiName = Set as Target
 				category = Set as Target
@@ -4059,6 +5502,7 @@ PART
 			{
 				active = True
 				guiActive = False
+				guiActiveUncommand = False
 				guiIcon = Unset Target
 				guiName = Unset Target
 				category = Unset Target
@@ -4070,6 +5514,8 @@ PART
 			{
 				active = False
 				guiActive = True
+				guiActiveEditor = True
+				guiActiveUncommand = False
 				guiIcon = Enable Crossfeed
 				guiName = Enable Crossfeed
 				category = Enable Crossfeed
@@ -4079,8 +5525,10 @@ PART
 			}
 			DisableXFeed
 			{
-				active = False
+				active = True
 				guiActive = True
+				guiActiveEditor = True
+				guiActiveUncommand = False
 				guiIcon = Disable Crossfeed
 				guiName = Disable Crossfeed
 				category = Disable Crossfeed
@@ -4092,9 +5540,23 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Control from Here
 				guiName = Control from Here
 				category = Control from Here
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Port: Enable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -4107,6 +5569,18 @@ PART
 				actionGroup = None
 			}
 			DecoupleAction
+			{
+				actionGroup = None
+			}
+			EnableXFeedAction
+			{
+				actionGroup = None
+			}
+			DisableXFeedAction
+			{
+				actionGroup = None
+			}
+			ToggleXFeedAction
 			{
 				actionGroup = None
 			}
@@ -4151,16 +5625,21 @@ PART
 	{
 		name = ModuleDeployableSolarPanel
 		isEnabled = True
-		currentRotation = (0, 0, 0, 0)
+		currentRotation = (-0.7071068, 0, 0, 0.7071068)
 		stateString = RETRACTED
 		storedAnimationTime = 0
-		storedAnimationSpeed = 0
+		storedAnimationSpeed = 1
+		efficiencyMult = 1
+		launchUT = -1
+		stagingEnabled = True
 		EVENTS
 		{
 			Extend
 			{
 				active = True
 				guiActive = True
+				guiActiveEditor = True
+				guiActiveUncommand = False
 				guiIcon = Extend Panels
 				guiName = Extend Panels
 				category = Extend Panels
@@ -4170,13 +5649,27 @@ PART
 			}
 			Retract
 			{
-				active = True
+				active = False
 				guiActive = True
+				guiActiveEditor = True
+				guiActiveUncommand = False
 				guiIcon = Retract Panels
 				guiName = Retract Panels
 				category = Retract Panels
 				guiActiveUnfocused = True
 				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
 		}
@@ -4235,16 +5728,21 @@ PART
 	{
 		name = ModuleDeployableSolarPanel
 		isEnabled = True
-		currentRotation = (0, 0, 0, 0)
+		currentRotation = (-0.7071068, 0, 0, 0.7071068)
 		stateString = RETRACTED
 		storedAnimationTime = 0
-		storedAnimationSpeed = 0
+		storedAnimationSpeed = 1
+		efficiencyMult = 1
+		launchUT = -1
+		stagingEnabled = True
 		EVENTS
 		{
 			Extend
 			{
 				active = True
 				guiActive = True
+				guiActiveEditor = True
+				guiActiveUncommand = False
 				guiIcon = Extend Panels
 				guiName = Extend Panels
 				category = Extend Panels
@@ -4254,13 +5752,27 @@ PART
 			}
 			Retract
 			{
-				active = True
+				active = False
 				guiActive = True
+				guiActiveEditor = True
+				guiActiveUncommand = False
 				guiIcon = Retract Panels
 				guiName = Retract Panels
 				category = Retract Panels
 				guiActiveUnfocused = True
 				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
 		}
@@ -4319,16 +5831,21 @@ PART
 	{
 		name = ModuleDeployableSolarPanel
 		isEnabled = True
-		currentRotation = (0, 0, 0, 0)
+		currentRotation = (-0.7071068, 0, 0, 0.7071068)
 		stateString = RETRACTED
 		storedAnimationTime = 0
-		storedAnimationSpeed = 0
+		storedAnimationSpeed = 1
+		efficiencyMult = 1
+		launchUT = -1
+		stagingEnabled = True
 		EVENTS
 		{
 			Extend
 			{
 				active = True
 				guiActive = True
+				guiActiveEditor = True
+				guiActiveUncommand = False
 				guiIcon = Extend Panels
 				guiName = Extend Panels
 				category = Extend Panels
@@ -4338,13 +5855,27 @@ PART
 			}
 			Retract
 			{
-				active = True
+				active = False
 				guiActive = True
+				guiActiveEditor = True
+				guiActiveUncommand = False
 				guiIcon = Retract Panels
 				guiName = Retract Panels
 				category = Retract Panels
 				guiActiveUnfocused = True
 				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
 		}
@@ -4403,16 +5934,21 @@ PART
 	{
 		name = ModuleDeployableSolarPanel
 		isEnabled = True
-		currentRotation = (0, 0, 0, 0)
+		currentRotation = (-0.7071068, 0, 0, 0.7071068)
 		stateString = RETRACTED
 		storedAnimationTime = 0
-		storedAnimationSpeed = 0
+		storedAnimationSpeed = 1
+		efficiencyMult = 1
+		launchUT = -1
+		stagingEnabled = True
 		EVENTS
 		{
 			Extend
 			{
 				active = True
 				guiActive = True
+				guiActiveEditor = True
+				guiActiveUncommand = False
 				guiIcon = Extend Panels
 				guiName = Extend Panels
 				category = Extend Panels
@@ -4422,13 +5958,27 @@ PART
 			}
 			Retract
 			{
-				active = True
+				active = False
 				guiActive = True
+				guiActiveEditor = True
+				guiActiveUncommand = False
 				guiIcon = Retract Panels
 				guiName = Retract Panels
 				category = Retract Panels
 				guiActiveUnfocused = True
 				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
 		}
@@ -4490,6 +6040,7 @@ PART
 		persistentState = STOWED
 		minAirPressureToOpen = 0.04
 		deployAltitude = 1000
+		stagingEnabled = True
 		minAirPressureToOpen_UIFlight
 		{
 			controlEnabled = True
@@ -4510,6 +6061,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Deploy Chute
 				guiName = Deploy Chute
 				category = Deploy Chute
@@ -4521,6 +6073,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Cut Parachute
 				guiName = Cut Parachute
 				category = Cut Parachute
@@ -4532,11 +6085,36 @@ PART
 			{
 				active = False
 				guiActive = False
+				guiActiveUncommand = False
 				guiIcon = Repack Chute
 				guiName = Repack Chute
 				category = Repack Chute
 				guiActiveUnfocused = True
 				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			Disarm
+			{
+				active = False
+				guiActive = True
+				guiActiveUncommand = False
+				guiIcon = Disarm
+				guiName = Disarm
+				category = Disarm
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
 		}
@@ -4556,15 +6134,29 @@ PART
 	{
 		name = ModuleTestSubject
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
 			RunTestEvent
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Run Test
 				guiName = Run Test
 				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -4578,8 +6170,21 @@ PART
 	{
 		name = ModuleDragModifier
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -4589,8 +6194,21 @@ PART
 	{
 		name = ModuleDragModifier
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -4638,6 +6256,7 @@ PART
 		persistentState = STOWED
 		minAirPressureToOpen = 0.04
 		deployAltitude = 1000
+		stagingEnabled = True
 		minAirPressureToOpen_UIFlight
 		{
 			controlEnabled = True
@@ -4658,6 +6277,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Deploy Chute
 				guiName = Deploy Chute
 				category = Deploy Chute
@@ -4669,6 +6289,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Cut Parachute
 				guiName = Cut Parachute
 				category = Cut Parachute
@@ -4680,11 +6301,36 @@ PART
 			{
 				active = False
 				guiActive = False
+				guiActiveUncommand = False
 				guiIcon = Repack Chute
 				guiName = Repack Chute
 				category = Repack Chute
 				guiActiveUnfocused = True
 				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			Disarm
+			{
+				active = False
+				guiActive = True
+				guiActiveUncommand = False
+				guiIcon = Disarm
+				guiName = Disarm
+				category = Disarm
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
 		}
@@ -4704,15 +6350,29 @@ PART
 	{
 		name = ModuleTestSubject
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
 			RunTestEvent
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Run Test
 				guiName = Run Test
 				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -4726,8 +6386,21 @@ PART
 	{
 		name = ModuleDragModifier
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -4737,8 +6410,21 @@ PART
 	{
 		name = ModuleDragModifier
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -4749,10 +6435,10 @@ PART
 {
 	part = parachuteRadial_4292552432
 	partName = Part
-	pos = -0.003761072,17.03922,-0.5425354
+	pos = -0.003761075,17.03922,-0.5425354
 	attPos = 0,0,0
 	attPos0 = 0.5910894,-0.07098162,-0.1583819
-	rot = -0.005693701,-0.130402,0.04324625,-0.9905012
+	rot = -0.005693703,-0.130402,0.04324625,-0.9905012
 	attRot = 0,0,0,1
 	attRot0 = -1.782692E-07,0.6087614,-1.384215E-07,-0.7933534
 	mir = 1,1,1
@@ -4786,6 +6472,7 @@ PART
 		persistentState = STOWED
 		minAirPressureToOpen = 0.04
 		deployAltitude = 1000
+		stagingEnabled = True
 		minAirPressureToOpen_UIFlight
 		{
 			controlEnabled = True
@@ -4806,6 +6493,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Deploy Chute
 				guiName = Deploy Chute
 				category = Deploy Chute
@@ -4817,6 +6505,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Cut Parachute
 				guiName = Cut Parachute
 				category = Cut Parachute
@@ -4828,11 +6517,36 @@ PART
 			{
 				active = False
 				guiActive = False
+				guiActiveUncommand = False
 				guiIcon = Repack Chute
 				guiName = Repack Chute
 				category = Repack Chute
 				guiActiveUnfocused = True
 				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			Disarm
+			{
+				active = False
+				guiActive = True
+				guiActiveUncommand = False
+				guiIcon = Disarm
+				guiName = Disarm
+				category = Disarm
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
 		}
@@ -4852,15 +6566,29 @@ PART
 	{
 		name = ModuleTestSubject
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
 			RunTestEvent
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Run Test
 				guiName = Run Test
 				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -4874,8 +6602,21 @@ PART
 	{
 		name = ModuleDragModifier
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -4885,8 +6626,21 @@ PART
 	{
 		name = ModuleDragModifier
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -4900,7 +6654,7 @@ PART
 	pos = -0.4348219,17.07694,0.206936
 	attPos = 0,0,0
 	attPos0 = -0.1583819,-0.07098055,-0.5910894
-	rot = -0.03460573,-0.7925982,0.02655398,-0.608182
+	rot = -0.03460573,-0.7925982,0.02655398,-0.6081821
 	attRot = 0,0,0,1
 	attRot0 = -2.230837E-07,-0.1305262,3.017129E-08,-0.9914449
 	mir = 1,1,1
@@ -4934,6 +6688,7 @@ PART
 		persistentState = STOWED
 		minAirPressureToOpen = 0.04
 		deployAltitude = 1000
+		stagingEnabled = True
 		minAirPressureToOpen_UIFlight
 		{
 			controlEnabled = True
@@ -4954,6 +6709,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Deploy Chute
 				guiName = Deploy Chute
 				category = Deploy Chute
@@ -4965,6 +6721,7 @@ PART
 			{
 				active = True
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Cut Parachute
 				guiName = Cut Parachute
 				category = Cut Parachute
@@ -4976,11 +6733,36 @@ PART
 			{
 				active = False
 				guiActive = False
+				guiActiveUncommand = False
 				guiIcon = Repack Chute
 				guiName = Repack Chute
 				category = Repack Chute
 				guiActiveUnfocused = True
 				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			Disarm
+			{
+				active = False
+				guiActive = True
+				guiActiveUncommand = False
+				guiIcon = Disarm
+				guiName = Disarm
+				category = Disarm
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
 		}
@@ -5000,15 +6782,29 @@ PART
 	{
 		name = ModuleTestSubject
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
 			RunTestEvent
 			{
 				active = False
 				guiActive = True
+				guiActiveUncommand = False
 				guiIcon = Run Test
 				guiName = Run Test
 				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -5022,8 +6818,21 @@ PART
 	{
 		name = ModuleDragModifier
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
@@ -5033,8 +6842,21 @@ PART
 	{
 		name = ModuleDragModifier
 		isEnabled = True
+		stagingEnabled = True
 		EVENTS
 		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
 		}
 		ACTIONS
 		{
