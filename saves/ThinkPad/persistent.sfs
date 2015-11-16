@@ -72,7 +72,7 @@ GAME
 		}
 		CAREER
 		{
-			TechTreeUrl = GameData/Squad/Resources/TechTree.cfg
+			TechTreeUrl = GameData\ModuleManager.TechTree
 			StartingFunds = 500000
 			StartingScience = 1980
 			StartingReputation = 0
@@ -88,7 +88,7 @@ GAME
 	{
 		name = ContractSystem
 		scene = 7, 8, 5, 6
-		update = 42937.2226479213
+		update = 43003.3026479106
 		version = 1.0.5
 		CONTRACTS
 		{
@@ -1863,6 +1863,9 @@ GAME
 			part = GooExperiment
 			part = trussPiece1x
 			part = parachuteSingle
+			part = Engineer7500
+			part = EngineerChip
+			part = KIS.guide
 		}
 		Tech
 		{
@@ -1923,6 +1926,8 @@ GAME
 			part = largeAdapter
 			part = launchClamp1
 			part = MK1CrewCabin
+			part = KIS.Container1
+			part = KIS.ContainerMount1
 		}
 		Tech
 		{
@@ -1945,6 +1950,7 @@ GAME
 			part = radPanelLg
 			part = mediumDishAntenna
 			part = radPanelEdge
+			part = KIS.wrench
 		}
 		Tech
 		{
@@ -1977,6 +1983,7 @@ GAME
 			part = sasModule
 			part = Mark2Cockpit
 			part = winglet3
+			part = kOSMachine1m
 		}
 		Tech
 		{
@@ -2046,6 +2053,7 @@ GAME
 			part = stackTriCoupler
 			part = pointyNoseConeA
 			part = fairingSize1
+			part = kis.concreteBase1
 		}
 		Tech
 		{
@@ -2110,6 +2118,7 @@ GAME
 			part = solarPanels3
 			part = ksp.r.largeBatteryPack
 			part = foldingRadMed
+			part = KIS.electricScrewdriver
 		}
 		Tech
 		{
@@ -2131,6 +2140,8 @@ GAME
 			part = strutCube
 			part = strutOcto
 			part = stackDecouplerMini
+			part = KIS.bomb1
+			part = kOSMachine0m
 		}
 		Tech
 		{
@@ -2187,6 +2198,7 @@ GAME
 			part = Large.Crewed.Lab
 			part = telescopicLadder
 			part = telescopicLadderBay
+			part = KIS.evapropellant
 		}
 		Science
 		{
@@ -2697,10 +2709,91 @@ GAME
 		scene = 7, 8, 5
 		id = 431487128
 	}
+	SCENARIO
+	{
+		name = KerbalConstructionTimeData
+		scene = 7, 5, 6, 8
+		KCT_DataStorage
+		{
+			enabledForSave = True
+			RecoveryModifier = 0.75
+			NoCostSimulations = False
+			DisableBuildTime = False
+			InstantTechUnlock = False
+			EnableAllBodies = False
+			Reconditioning = True
+			fundsFromSimulation = 0
+			firstStart = False
+			TotalUpgradePoints = 43
+			TechUpgrades = 9
+			activeKSC = Stock
+			SimulationTime = 
+			VABUpgrades
+			{
+				Item = 0
+			}
+			SPHUpgrades
+			{
+				Item = 0
+			}
+			RDUpgrades
+			{
+				Item = 0
+				Item = 0
+			}
+			PurchasedUpgrades
+			{
+				Item = 0
+				Item = 0
+			}
+			BodiesVisited
+			{
+				Item = Kerbin
+			}
+		}
+		KSC
+		{
+			KSCName = Stock
+			VABUpgrades
+			{
+				Upgrade = 21
+			}
+			SPHUpgrades
+			{
+				Upgrade = 0
+			}
+			RDUpgrades
+			{
+				Upgrade = 13
+				Upgrade = 9
+			}
+			VABList
+			{
+			}
+			SPHList
+			{
+			}
+			VABWarehouse
+			{
+			}
+			SPHWarehouse
+			{
+			}
+			KSCTech
+			{
+			}
+			Recon_Rollout
+			{
+			}
+		}
+		TechList
+		{
+		}
+	}
 	FLIGHTSTATE
 	{
 		version = 1.0.5
-		UT = 42939.2226479209
+		UT = 43003.8026479105
 		activeVessel = 0
 		mapViewFiltering = 1023
 		VESSEL
@@ -10957,13 +11050,13 @@ GAME
 			cMod = -1
 			ORBIT
 			{
-				SMA = 300510.165800069
+				SMA = NaN
 				ECC = 1
 				INC = NaN
-				LPE = 18.7405760197909
-				LAN = 99.746592627044
-				MNA = 3.14159265358979
-				EPH = 42937.0626479213
+				LPE = 108.685034361741
+				LAN = 228.277215457279
+				MNA = -8.40714670366795
+				EPH = 43003.2226479106
 				REF = 1
 			}
 			PART
